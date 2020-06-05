@@ -18,7 +18,7 @@ class _MyAppState extends State<MyApp> {
   int number = 1;
   @override
   Widget build(BuildContext context) {
-    return Scaffold( backgroundColor: Colors.blue,
+    return Scaffold( backgroundColor: Colors.lightBlueAccent,
       appBar: AppBar(title: Text('Ask Me Anything'),),
       body: Center(
         child: Container(
