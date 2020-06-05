@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 void main() => runApp(
       MaterialApp(
         home: Scaffold(
+
           appBar: AppBar(
             title: Text('Ask Me Anything'),
           ),
@@ -23,15 +24,18 @@ class _MyAppState extends State<MyApp> {
   int number = 1;
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        child: FlatButton(
-          onPressed: () {
-            setState(() {
-              number=Random().nextInt(5)+1;
-            });
-          },
-          child: Image.asset('images/ball$number.png'),
+    return Scaffold( backgroundColor: Colors.blue,
+      appBar: AppBar(title: Text('Ask Me Anything'),),
+      body: Center(
+        child: Container(
+          child: FlatButton(
+            onPressed: () {
+              setState(() {
+                number=Random().nextInt(5)+1;
+              });
+            },
+            child: Image.asset('images/ball$number.png'),
+          ),
         ),
       ),
     );
